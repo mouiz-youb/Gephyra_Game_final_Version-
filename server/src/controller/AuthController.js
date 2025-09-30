@@ -43,7 +43,39 @@ const signup = async(req, res) => {
     }
 }
 // login controller
-const login = (req, res) => {
-  res.send("login route");
+const login = async(req, res) => {
+  const {email , password} = req.body
+  // chack is all fields are present
+  if(!email || !password){
+      return res.status(400).send({message : "All fields are required"});
+  }
+  try {
+    // check user is exist
+    const UserExist = await prisma.user.findUnique({
+      where : {email}
+    })
+    if(!UserExist){
+      return res.status(400).send({message : "Signup first, User not found"});
+    }
+    // compare password 
+    const isPasswordValid = await comparePassword(password, UserExist.password);
+    if(!isPasswordValid){
+      return res.status(400).send({message : "Password is incorrect Try again"});
+    }
+    // generate token
+    const token = generateToken({id : UserExist.id , email : UserExist.email});
+    // send response 
+    res.status(200).send({
+      message : "Login successful",
+      user:{
+        id : UserExist.id,
+        email : UserExist.email,
+        username : UserExist.username,
+        token
+      }
+    })
+  } catch (error) {
+    res.status(500).send({message : "Something went wrong Try again ", error : error.message});
+  }
 }
 export { signup, login };
