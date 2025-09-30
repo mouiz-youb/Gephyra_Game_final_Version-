@@ -12,8 +12,7 @@ function Signup() {
             email , username , password 
         }
         await signup(username, email, password); // ✅ use hook
-        // const response = await axios.post("http://localhost:5000/auth/signup", user)
-        // console.log(user)
+        
        
     }
   return (

@@ -15,14 +15,14 @@ createRoot(document.getElementById('root')!).render(
         toastOptions={{
           duration: 3000, 
           success: {
-            duration: 2000,
+            duration: 5000,
             style: {
               background: "green",
               color: "white", // ✅ optional for readability
             },
           },
           error: {
-            duration: 4000,
+            duration: 5000,
             style: {
               background: "red",
               color: "white",
