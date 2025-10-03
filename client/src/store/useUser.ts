@@ -6,6 +6,7 @@ export interface userData {
   id: number;
   email: string;
   username: string;
+  points: number
 }
 
 interface AuthState {

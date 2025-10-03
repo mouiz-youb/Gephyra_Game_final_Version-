@@ -17,7 +17,7 @@ const getUserPoints = async(req,res)=>{
              return res.status(404).send({ message: "User not found" });
         }
         res.status(200).send({
-            msg:"User score fetched seccessfully ",
+            msg:"User score fetched seccessfully hiiiiiiiiiiiiiiiii ",
             score :user.points
         })
     } catch (error) {

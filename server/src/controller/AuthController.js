@@ -35,7 +35,8 @@ const signup = async(req, res) => {
           id : user.id,
           email : user.email,
           username : user.username,
-          token
+          token, 
+          points :user.points
         }
       })
     } catch (error) {
@@ -71,7 +72,8 @@ const login = async(req, res) => {
         id : UserExist.id,
         email : UserExist.email,
         username : UserExist.username,
-        token
+        token , 
+        points :UserExist.points
       }
     })
   } catch (error) {
