@@ -1,5 +1,6 @@
 import express from 'express';
 import AuthRouter from "./router/AuthRouter.js"
+import GameRouter from "./router/GameRouter.js"
 import cors from "cors"
 const app = express();
 const port  = 5000;
@@ -8,6 +9,8 @@ app.use(cors({
   origin: "http://localhost:5173", // allow frontend dev server
 }));
 app.use("/auth", AuthRouter);
+// game router 
+app.use("/game",GameRouter)
 app.get('/', (req, res) => {
     res.send('listen to hi !');
 });
