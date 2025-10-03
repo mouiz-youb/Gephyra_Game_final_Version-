@@ -4,7 +4,7 @@ import './App.css'
 import Signup from './pages/Signup'
 import Score from './pages/Score'
 import Login from './pages/Login'
-
+import QRCodeForPrinting from './pages/QrcodeForPrinting'
 function App() {
   
   return (
@@ -13,6 +13,7 @@ function App() {
         <Route path='/signup' element={<Signup/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/score' element={<Score/>}/>
+        <Route path='/qrcode' element={<QRCodeForPrinting/>}/>
         
       </Routes>
     </div>
