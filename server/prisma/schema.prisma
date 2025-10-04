@@ -38,7 +38,7 @@ model Scan {
   codeId Int 
   pointsGained Int 
   user User @relation(fields: [userId], references: [id])
-  qrcode Qrcode @relation(fields: [codeId], references: [id])
+  qrcode Qrcode @relation(fields: [codeId], references: [id] , onDelete: Cascade)
   createdAt DateTime @default(now())
   @@unique([userId, codeId])
 }

@@ -8,7 +8,7 @@ export const useGame = ()=>{
      const { qrCodes, setQRCodes } = useGameStore();
      const fetchQRcode = async()=>{
         try {
-            const response = await axios.post<any>("http://localhost:5000/game/generated");
+            const response = await axios.post("http://localhost:5000/game/generated");
             setQRCodes(response.data.savedQrcode);
             console.log(response.data.savedQrcode)
             toast.success(response.data.msg)
