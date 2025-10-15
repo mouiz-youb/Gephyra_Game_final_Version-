@@ -6,19 +6,19 @@ import BG from "../images/bg.png"
 import "../index.css"
 import SignForm from '../Components/SignForm'
 function Signup() {
-    const {signup} = useSignup()
-    const [username, setusername] = useState("")
-    const [email, setemail] = useState("")
-    const [password, setpassword] = useState("")
-    const handleSumit = async(e:React.FormEvent) =>{
-        e.preventDefault()
-        const user = {
-            email , username , password 
-        }
-        await signup(username, email, password); // ✅ use hook
+    // const {signup} = useSignup()
+    // const [username, setusername] = useState("")
+    // const [email, setemail] = useState("")
+    // const [password, setpassword] = useState("")
+    // const handleSumit = async(e:React.FormEvent) =>{
+    //     e.preventDefault()
+    //     const user = {
+    //         email , username , password 
+    //     }
+    //     await signup(username, email, password); // ✅ use hook
         
        
-    }
+    // }
   return (
     <div className=' w-full h-full flex flex-col justify-center items-center bg-[url("./images/AuthBg.svg")] md:bg-[url("./images/AuthBg2.svg")] bg-center bg-no-repeat bg-cover  '>
         <div className='p-5 w-full h-screen bg-[rgba(0,0,0,0.336)]  flex justify-start items-center flex-col   '>

@@ -6,7 +6,7 @@ export const useSignup =()=>{
     const  setAuth = useAuthStore((state)=>state.setAuth)
 
     const navigate = useNavigate()
-    const signup = async (username:string,email:string,password:string)=>{
+    const signup = async (email:string,username:string,password:string)=>{
         const user ={email , username , password }
         try{
             const response = await axios.post("http://localhost:5000/auth/signup", user)

@@ -7,6 +7,7 @@ const port  = 5000;
 app.use(express.json());
 app.use(cors({
   origin: "http://localhost:5174", // allow frontend dev server
+  credentials: true,
 }));
 app.use("/auth", AuthRouter);
 // game router 

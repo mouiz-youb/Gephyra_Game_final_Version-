@@ -37,7 +37,7 @@ function LoginForm() {
             <button type="submit" className='px-5 py-2 bg-[#EEC181] rounded-3xl cursor-pointer '>Log In  </button>
             <p className='flex justify-center items-center flex-row font-bold  '>
             Don’t have an account? 
-            <Link to="/signup">Login</Link>
+            <Link to="/signup">signup</Link>
             </p>
         </div>
     </form>
