@@ -1,5 +1,6 @@
 import React , {useState} from 'react'
 import { useSignup } from '../Hook/useSignup'
+import { useLogin } from '../Hook/useLogin'
 import axios from 'axios'
 import GameLogo from "../images/GameLogo.svg"
 import BG from "../images/bg.png"
@@ -7,7 +8,7 @@ import "../index.css"
 import SignForm from '../Components/SignForm'
 import LoginForm from '../Components/LoginForm'
 function Login() {
-    const {signup} = useSignup()
+    const login = useLogin()
     const [username, setusername] = useState("")
     const [email, setemail] = useState("")
     const [password, setpassword] = useState("")
@@ -16,7 +17,7 @@ function Login() {
         const user = {
             email , username , password 
         }
-        await signup(username, email, password); // ✅ use hook
+        await login( email, password); // ✅ use hook
         
        
     }
@@ -25,7 +26,7 @@ function Login() {
         <div className='p-5 w-full h-screen bg-[rgba(0,0,0,0.336)]  flex justify-start items-center flex-col   '>
             <div className='flex justify-start items-center flex-col w-full md:w-1/2 '>
                 <img src={BG} alt="" className='w-[100px] h-[150px]'/>
-                <h1 className='text-white text-3xl md:text-5xl mb-5'>Sign In </h1>
+                <h1 className='text-white text-3xl md:text-5xl mb-5'>Log In </h1>
             </div>
                 <LoginForm/>
         </div>

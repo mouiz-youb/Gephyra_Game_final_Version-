@@ -23,5 +23,5 @@ export const useLogin =()=>{
             toast.error(err.response?.data?.message || "Signup failed")
         }
     }
-    return {login}
+    return login
 }
