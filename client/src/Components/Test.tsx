@@ -1,13 +1,14 @@
-import { useAuth } from '../Hook/useGetData'
-import { useNavigate } from 'react-router-dom';
-import {motion} from "framer-motion"
-import type {Variants} from "framer-motion"
+// File: Test2.tsx
+
+import React from "react";
+import { motion } from "framer-motion";
+import type{ Variants } from "framer-motion";
+
+// I've removed the unused image imports (vault, vault3, key) for cleanliness.
 import vaultX from "../images/vaultX.png";
 import coin2 from "../images/coin2.png";
 import "../index.css";
-import Header from '../Components/Header';
-import Vault from '../Components/ScoreCore';
-import ScoreCore from '../Components/ScoreCore';
+
 // 1. Define the variants for the coin animations.
 // We'll use the `custom` prop to handle the different starting positions.
 const coinVariants: Variants = {
@@ -66,17 +67,11 @@ const coinInitialPositions = [
   { x: '-100vw', y: '100vh',  colorClass: 'text-yellow-600' },
   { x: '-100vw', y: '-100vh', colorClass: 'text-green-600'  },
 ];
-const Score:React.FC=()=> {
-  const {user , isAuthenticated , logout }= useAuth()
-  const navigate= useNavigate()
-   if (!isAuthenticated) return <p>Please log in.</p>;
-    const handleLogout = () => {
-    logout(); 
-    navigate('/login'); 
-  };
-  
+
+
+const Test: React.FC = () => {
   return (
-    <motion.div className="flex h-full w-full items-center justify-center ">
+    <motion.div className="flex h-full w-full items-center justify-center text-4xl">
       {/* 4. Map over the positions array to render each coin */}
       {coinInitialPositions.map((pos, index) => (
         <motion.div
@@ -92,15 +87,18 @@ const Score:React.FC=()=> {
           <img src={coin2} className="w-[100px]" alt="coin" />
         </motion.div>
       ))}
-      <ScoreCore/>
+
+      <motion.div
+        className="absolute flex items-center justify-center text-purple-600"
+        style={{ transformStyle: "preserve-3d" }}
+        variants={vaultVariants}
+        initial="initial"
+        animate="visible"
+      >
+        <img src={vaultX} alt="vault" className="w-2/3 shadowx" />
+      </motion.div>
     </motion.div>
-  )
-}
+  );
+};
 
-export default Score
-
-
-{/* <h2>Welcome, {user?.username}</h2>
-      <p>Email: {user?.email}</p>
-       <p>Score: {user?.points}</p>
-      <button className='cursor-pointer' onClick={handleLogout}>Logout</button> */}
+export default Test;

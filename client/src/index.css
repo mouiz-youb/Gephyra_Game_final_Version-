@@ -2,6 +2,10 @@
 *{
     box-sizing: border-box;
 }
+.grad {
+  background-image: linear-gradient(270deg, #E6CA70 0%, #9A7923 100%);
+}
+
 .focus2:focus{
     outline: transparent;
     border: transparent;
@@ -27,4 +31,7 @@
   .auth-bg {
     background-image: url("./images/AuthBg2.svg"); /* Desktop background */
   }
+}
+.shadowx{
+    filter: drop-shadow(1px 1px 20px goldenrod);
 }

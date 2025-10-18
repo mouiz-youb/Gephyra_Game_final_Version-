@@ -1,7 +1,7 @@
 import React from 'react'
 import {motion  } from "framer-motion"
 import type{Variants  } from "framer-motion"
-
+import Score from '../pages/Score'
 const AnimateOne:React.FC=()=> {
 
     const animationVariants: Variants = {
@@ -26,7 +26,7 @@ const AnimateOne:React.FC=()=> {
         className="h-2 bg-black"
       >
         <div className="bg w-full h-full flex justify-center items-center">
-          {/* <Test2 /> */}
+          <Score />
         </div>
       </motion.div>
     </div>
