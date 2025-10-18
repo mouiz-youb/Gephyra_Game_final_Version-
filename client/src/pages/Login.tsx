@@ -1,26 +1,9 @@
-import React , {useState} from 'react'
-import { useSignup } from '../Hook/useSignup'
-import { useLogin } from '../Hook/useLogin'
-import axios from 'axios'
-import GameLogo from "../images/GameLogo.svg"
+
 import BG from "../images/bg.png"
 import "../index.css"
-import SignForm from '../Components/SignForm'
 import LoginForm from '../Components/LoginForm'
 function Login() {
-    // const login = useLogin()
-    // const [username, setusername] = useState("")
-    // const [email, setemail] = useState("")
-    // const [password, setpassword] = useState("")
-    // const handleSumit = async(e:React.FormEvent) =>{
-    //     e.preventDefault()
-    //     const user = {
-    //         email , username , password 
-    //     }
-    //     await login( email, password); // ✅ use hook
-        
-       
-    // }
+
   return (
     <div className=' w-full h-full flex flex-col justify-center items-center bg-[url("./images/AuthBg.svg")] md:bg-[url("./images/AuthBg2.svg")] bg-center bg-no-repeat bg-cover  '>
         <div className='p-5 w-full h-screen bg-[rgba(0,0,0,0.336)]  flex justify-start items-center flex-col   '>

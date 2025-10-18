@@ -1,4 +1,4 @@
-import React , {useState} from 'react'
+import  {useState} from 'react'
 import InputComponent from "./InputComponent"
 import { FaUser } from "react-icons/fa6";
 import { MdOutlineEmail } from "react-icons/md";

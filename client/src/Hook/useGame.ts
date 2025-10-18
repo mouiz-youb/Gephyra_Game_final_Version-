@@ -2,7 +2,7 @@ import axios from "axios";
 import { toast } from "react-hot-toast";
 import useGameStore from "../store/GameStore";
 
-const API_URL= "http://localhost:5000/"
+// const API_URL= "http://localhost:5000/"
 
 export const useGame = ()=>{
      const { qrCodes, setQRCodes } = useGameStore();

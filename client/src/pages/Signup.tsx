@@ -1,7 +1,7 @@
-import React , {useState} from 'react'
-import { useSignup } from '../Hook/useSignup'
-import axios from 'axios'
-import GameLogo from "../images/GameLogo.svg"
+// import React , {useState} from 'react'
+// import { useSignup } from '../Hook/useSignup'
+// import axios from 'axios'
+// import GameLogo from "../images/GameLogo.svg"
 import BG from "../images/bg.png"
 import "../index.css"
 import SignForm from '../Components/SignForm'

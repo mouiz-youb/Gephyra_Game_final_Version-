@@ -1,5 +1,5 @@
 // src/pages/QRCodeForPrinting.tsx
-import React, { useEffect } from "react";
+import  { useEffect } from "react";
 import { QRCode } from "react-qrcode"; 
 import {useGame}  from "../Hook/useGame";
 

@@ -1,4 +1,4 @@
-import React ,{useState} from 'react'
+import {useState} from 'react'
 import InputComponent from "./InputComponent"
 import { MdOutlineEmail } from "react-icons/md";
 import { MdLock } from "react-icons/md";

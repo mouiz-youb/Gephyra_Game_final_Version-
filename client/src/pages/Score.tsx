@@ -1,12 +1,12 @@
 import { useAuth } from '../Hook/useGetData'
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 import {motion} from "framer-motion"
 import type {Variants} from "framer-motion"
-import vaultX from "../images/vaultX.png";
+// import vaultX from "../images/vaultX.png";
 import coin2 from "../images/coin2.png";
 import "../index.css";
-import Header from '../Components/Header';
-import Vault from '../Components/ScoreCore';
+// import Header from '../Components/Header';
+// import Vault from '../Components/ScoreCore';
 import ScoreCore from '../Components/ScoreCore';
 // 1. Define the variants for the coin animations.
 // We'll use the `custom` prop to handle the different starting positions.
@@ -40,23 +40,23 @@ const coinVariants: Variants = {
 };
 
 // 2. Define variants for the vault animation for clarity and consistency.
-const vaultVariants: Variants = {
-  initial: {
-    opacity: 0,
-    z: 500,
-    scale: 0.2,
-  },
-  visible: {
-    opacity: 1,
-    z: 0,
-    scale: 1,
-    transition: {
-      duration: 2,
-      delay: 4, // starts after others finish moving
-      ease: "easeOut",
-    },
-  },
-};
+// const vaultVariants: Variants = {
+//   initial: {
+//     opacity: 0,
+//     z: 500,
+//     scale: 0.2,
+//   },
+//   visible: {
+//     opacity: 1,
+//     z: 0,
+//     scale: 1,
+//     transition: {
+//       duration: 2,
+//       delay: 4, // starts after others finish moving
+//       ease: "easeOut",
+//     },
+//   },
+// };
 
 // 3. Store the unique starting positions in an array.
 // This allows us to map over them instead of repeating code.
@@ -67,13 +67,13 @@ const coinInitialPositions = [
   { x: '-100vw', y: '-100vh', colorClass: 'text-green-600'  },
 ];
 const Score:React.FC=()=> {
-  const {user , isAuthenticated , logout }= useAuth()
-  const navigate= useNavigate()
+  const { isAuthenticated  }= useAuth()
+  // const navigate= useNavigate()
    if (!isAuthenticated) return <p>Please log in.</p>;
-    const handleLogout = () => {
-    logout(); 
-    navigate('/login'); 
-  };
+  //   const handleLogout = () => {
+  //   logout(); 
+  //   navigate('/login'); 
+  // };
   
   return (
     <motion.div className="flex h-full w-full items-center justify-center ">
