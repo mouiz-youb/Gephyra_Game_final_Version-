@@ -5,6 +5,7 @@ import Signup from './pages/Signup'
 import Score from './pages/Score'
 import Login from './pages/Login'
 import QRCodeForPrinting from './pages/QrcodeForPrinting'
+import AnimateOne from './Components/AnimateOne'
 function App() {
   
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path='/signup' element={<Signup/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/score' element={<Score/>}/>
+        <Route path='/test' element={<AnimateOne/>}/>
         <Route path='/qrcode' element={<QRCodeForPrinting/>}/>
         
       </Routes>

@@ -10,13 +10,16 @@ function Score() {
   };
   
   return (
-     <div>
-      <h2>Welcome, {user?.username}</h2>
-      <p>Email: {user?.email}</p>
-       <p>Score: {user?.points}</p>
-      <button className='cursor-pointer' onClick={handleLogout}>Logout</button>
+    <div>
+      
     </div>
   )
 }
 
 export default Score
+
+
+{/* <h2>Welcome, {user?.username}</h2>
+      <p>Email: {user?.email}</p>
+       <p>Score: {user?.points}</p>
+      <button className='cursor-pointer' onClick={handleLogout}>Logout</button> */}

@@ -6,7 +6,7 @@ const app = express();
 const port  = 5000;
 app.use(express.json());
 app.use(cors({
-  origin: "http://localhost:5174", // allow frontend dev server
+  origin: "http://localhost:5173", // allow frontend dev server
   credentials: true,
 }));
 app.use("/auth", AuthRouter);
